@@ -6,19 +6,21 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc =new Scanner(System.in);
 
-        Product product1 = new Product();
+
 
         System.out.println("Enter product data: ");
         System.out.println("Name: ");
-        product1.name = sc.nextLine();
+        String name = sc.nextLine();
         System.out.println("Price");
-        product1.price = sc.nextDouble();
+        double price = sc.nextDouble();
         System.out.println("Quantity");
-        product1.quantity = sc.nextInt();
-
+        int quantity = sc.nextInt();
+        Product product1 = new Product(name, price, quantity);
         System.out.println(product1);
         System.out.println("Enter the quantity add in stock");
         product1.addProducts(sc.nextInt());
+        product1.setName("computer");
+        System.out.println("Updated name: "+ product1.getName());
         System.out.println("Updated data: "+product1.totalValueInStock());
         sc.close();
     }
