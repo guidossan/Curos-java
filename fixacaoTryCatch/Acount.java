@@ -1,3 +1,4 @@
+package fixacaoTryCatch;
 public class Acount {
     private Integer number;
     private String holder;
@@ -12,10 +13,18 @@ public class Acount {
     }
 
     public void deposit(double amount){
-
+        this.balance += amount;
     }
-    public void withdraw(double amount){
-
+    public void withdraw(double amount) throws Exception{
+        if(amount > withdrawLimit){
+            throw new Exception("The withdraw limit pass");
+        }
+        balance -= amount;
+    }
+    @Override
+    public String toString(){
+        return ": "
+        +balance;
     }
 
     public Integer getNumber() {
