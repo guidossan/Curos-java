@@ -5,7 +5,7 @@ public class Board {
     private int column;
     private Piece[][] pieces;
 
-    public Board(int row, int column {
+    public Board(int row, int column) {
         this.row = row;
         this.column = column;
         pieces = new Piece[row][column];
