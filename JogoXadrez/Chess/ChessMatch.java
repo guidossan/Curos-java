@@ -1,12 +1,15 @@
 package JogoXadrez.Chess;
-
+import JogoXadrez.Chess_Pieces.Rook;
 import JogoXadrez.BoardGame.Board;
+import JogoXadrez.BoardGame.Position;
+import JogoXadrez.Chess_Pieces.King;
 
 public class ChessMatch {
     private Board board;
 
     public ChessMatch() {
         board = new Board(8, 8);
+        initialSetup();
     }
     public ChessPiece[][] getPieces(){
         ChessPiece[][] mat = new ChessPiece[board.getRow()][board.getColumn()];
@@ -16,6 +19,10 @@ public class ChessMatch {
             }
         }
         return mat;
+    }
+    public void initialSetup(){
+        board.placePiece(new King(board, Color.WHITE), new Position(2, 1));
+        board.placePiece(new Rook(board, Color.WHITE), new Position(0, 4));
     }
     
 }
