@@ -1,13 +1,12 @@
 package JogoXadrez.Chess;
 import JogoXadrez.Chess_Pieces.Rook;
 import JogoXadrez.BoardGame.Board;
-import JogoXadrez.BoardGame.Position;
 import JogoXadrez.Chess_Pieces.King;
 
 public class ChessMatch {
     private Board board;
 
-    public ChessMatch() {
+    public ChessMatch() throws ChessException {
         board = new Board(8, 8);
         initialSetup();
     }
@@ -20,10 +19,13 @@ public class ChessMatch {
         }
         return mat;
     }
-    public void initialSetup(){
-        board.placePiece(new King(board, Color.WHITE), new Position(2, 1));
-        board.placePiece(new Rook(board, Color.WHITE), new Position(0, 4));
-        board.placePiece(new Rook(board, Color.WHITE), new Position(9, 4));
+    private void placeNewPiece(char column, int row, ChessPiece piece) throws ChessException{
+        board.placePiece(piece, new ChessPosition(column, row).toPosition());
+    }
+    public void initialSetup() throws ChessException{
+        placeNewPiece('b' , 6, new Rook(board, Color.WHITE));
+        placeNewPiece('d' , 1, new King(board, Color.WHITE));
+        placeNewPiece('a' , 7, new Rook(board, Color.BLACK));
     }
     
 }
