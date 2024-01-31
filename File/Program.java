@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args){
-        File file = new File("C:\\Users\\guims\\OneDrive\\Desktop\\teste.txt");
+        File file = new File("C:\\temp\\arquivo.csv");
         Scanner sc = null ;
         try { 
             sc = new Scanner(file);
