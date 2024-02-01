@@ -1,8 +1,13 @@
 package Interface;
 
 public class ContractService {
-    public void processContract(Contract contract, Integer months){
-        
-        OnlinePaymentAService()
+    private OnlinePaymentAService onlinePaymentAService;
+
+    public ContractService(OnlinePaymentAService onlinePaymentAService) {
+        this.onlinePaymentAService = onlinePaymentAService;
+    } 
+
+    public void processContract(Contract contract int mounts){
+        contract.getInstallments().add(null)
     }
 }
