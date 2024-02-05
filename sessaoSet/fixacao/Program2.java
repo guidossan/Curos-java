@@ -7,7 +7,7 @@ import java.util.Set;
 
 
 public class Program2 {
-    public static void main(String[]args){
+    public static void main(String[] args){
         Set<Student> a = new HashSet<>();
         Set<Student> b = new HashSet<>();
         Set<Student> c = new HashSet<>();       
