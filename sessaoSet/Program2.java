@@ -1,4 +1,4 @@
-package sessaoSet.fixacao;
+package sessaoSet;
 
 
 import java.util.HashSet;
@@ -14,19 +14,19 @@ public class Program2 {
         Scanner sc = new Scanner(System.in);
         System.out.print("how many students for course A:");
         int num = sc.nextInt();
-        for (int i = 0; i <= num; i++){
+        for (int i = 0; i < num; i++){
             Student student = new Student(sc.nextInt());
             a.add(student);
         }
         System.out.print("how many students for course B:");
         int num2 = sc.nextInt();
-        for (int i = 0; i <= num2; i++){
+        for (int i = 0; i < num2; i++){
             Student student = new Student(sc.nextInt());
             b.add(student);
         }
         System.out.print("how many students for course C:");
         int num3 = sc.nextInt();
-        for (int i = 0; i <= num3; i++){
+        for (int i = 0; i < num3; i++){
             Student student = new Student(sc.nextInt());
             c.add(student);
         }

@@ -1,4 +1,4 @@
-package sessaoSet.fixacao;
+package sessaoSet;
 
 public class Student {
     private Integer number;
